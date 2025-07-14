@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Contact Information</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="profile.png" alt="My Photo" class="avatar">
+      <h1>Profile</h1>
+      <h2>Joschka Gabriel T. Atabelo</h2>
+      <p>Bachelor of Science in Information Technology</p>
+      <p>126 Greenville Homes, Old Bayanihan Street, Baesa, Caloocan City</p>
+      <p>Email: <a href="mailto:joschkagabriel@gmail.com">joschkagabriel@gmail.com</a></p>
+      <p>Contact Number: 09219892538</p>
+    </aside>
+
+    <main class="content">
+      <section class="section">
+        <h2>About Me</h2>
+        <p>
+          I am a first-year Information Technology student at FEU Tech, specializing in Cybersecurity.
+          I am passionate about digital security, ethical hacking, and protecting systems from cyber threats.
+          My goal is to become a skilled cybersecurity professional who can help individuals and organizations stay safe in the digital world.
+        </p>
+        <p>
+          As I begin my academic journey, I am focused on building a strong foundation in network security,
+          system administration, and programming. I am eager to gain practical experience through projects,
+          internships, and certifications related to cybersecurity.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>FEU Institute of Technology</strong><br />2024 – Present</li>
+          <li><strong>Notre Dame of Greater Manila</strong><br />Senior High School (STEM Strand)<br />2022 – 2024</li>
+          <li><strong>Notre Dame of Greater Manila</strong><br />Junior High School<br />2018 – 2022</li>
+          <li><strong>Notre Dame of Greater Manila</strong><br />Elementary School<br />2012 – 2018</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>Basic C++ Programming</li>
+          <li>Basic HTML and CSS Web Design</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Interests</h2>
+        <ul>
+          <li>Cybersecurity and Ethical Hacking</li>
+          <li>Web Development and Design</li>
+          <li>Gaming and Game Mechanics</li>
+          <li>Learning Programming Languages</li>
+          <li>Tech Trends and Digital Innovation</li>
+        </ul>
+      </section>
+
+      <section class="section contact-form">
+        <h2>Contact Me</h2>
+        <p>If you'd like to message me directly, please fill out the form below.</p>
+        <form id="contact-form" action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address (e.g., user@example.com)"
+          />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="response"></p>
+      </section>
+    </main>
+  </div>
+
+  <div style="text-align: center; margin: 40px 0;">
+    <button id="theme-toggle" class="button rocket-hover">Toggle Light Mode</button>
+  </div>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwCdaArcPoPShnaRNLMZnaXBuK4Kxnyx2VNCyunfsLtubiaAErseMOxdrUorNfCn9-eAA/exec";
+    const form = document.getElementById("contact-form");
+    const responseMsg = document.getElementById("response");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const inputs = form.querySelectorAll("input, textarea");
+      let allFilled = true;
+      let validEmail = true;
+
+      responseMsg.textContent = "";
+
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].classList.remove("error");
+        if (inputs[i].value.trim() === "") {
+          inputs[i].classList.add("error");
+          allFilled = false;
+        }
+      }
+
+      const email = document.getElementById("email");
+      const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailPattern.test(email.value)) {
+        email.classList.add("error");
+        validEmail = false;
+      }
+
+      if (!allFilled) {
+        responseMsg.textContent = "Please fill out all fields.";
+        return;
+      }
+
+      if (!validEmail) {
+        responseMsg.textContent = "Please enter a valid email address.";
+        return;
+      }
+
+      const formData = new FormData(form);
+      fetch(scriptURL, {
+        method: "POST",
+        body: new URLSearchParams(formData)
+      })
+        .then(res => res.json())
+        .then(data => {
+          responseMsg.textContent = "Message sent successfully!";
+          responseMsg.textContent = "Message sent successfully!";
+		  form.reset();
+
+
+		  firework(window.innerWidth / 2, window.innerHeight / 2);
+
+        })
+        .catch(error => {
+          responseMsg.textContent = "Error sending message.";
+          console.error("Error!", error.message);
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("theme-toggle");
+      const body = document.body;
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-mode");
+        toggleBtn.textContent = body.classList.contains("light-mode")
+          ? "Toggle Dark Mode"
+          : "Toggle Light Mode";
+      });
+    });
+  </script>
+  <script>
+  for (let i = 0; i < 40; i++) {
+    const star = document.createElement("div");
+    star.className = "neon-star";
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    document.body.appendChild(star);
+  }
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const avatar = document.querySelector(".avatar");
+    if (avatar) {
+      avatar.classList.add("animate-in");
+    }
+  });
+</script>
+<script>
+const canvas = document.getElementById('fireworks-canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+function firework(x, y) {
+  const particles = [];
+
+  for (let i = 0; i < 100; i++) {
+    particles.push({
+      x: x,
+      y: y,
+      angle: Math.random() * 2 * Math.PI,
+      speed: Math.random() * 5 + 2,
+      radius: Math.random() * 2 + 1,
+      alpha: 1,
+      color: `hsl(${Math.random() * 360}, 100%, 70%)`
+    });
+  }
+
+  const interval = setInterval(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += Math.cos(p.angle) * p.speed;
+      p.y += Math.sin(p.angle) * p.speed;
+      p.alpha -= 0.015;
+      p.radius *= 0.96;
+    });
+
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${hexToRgb(p.color)},${p.alpha})`;
+      ctx.fill();
+    });
+
+    if (particles.every(p => p.alpha <= 0)) {
+      clearInterval(interval);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }, 30);
+}
+
+function hexToRgb(hsl) {
+  // Fallback: Use random pastel fallback colors
+  return "255,255,255";
+}
+</script>
+
+</body>
+</html>
