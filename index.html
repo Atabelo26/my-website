@@ -2,108 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UN SDG Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Registration</h1>
+      </div>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g. Jose Jack Gerard" required>
 
-  <header>
-    <img src="profile.png" alt="My Photo" class="avatar">
-    <h1 class="glitch-text">Welcome to My Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="project.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="e.g. josejackgerard@gmail.com" required>
 
-  <main role="main">
-    <section id="about" class="about cyber-animate">
-      <h2>About</h2>
-      <p>This website is a portfolio of my projects using HTML and CSS</p>
-    </section>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="0" required>
 
-    <section id="skills" class="skills futuristic-bg cyber-animate">
-      <h2>What I Do</h2>
-      <p>💻 Build HTML/CSS websites</p>
-      <p>🎨 Design clean, modern layouts</p>
-      <p>📚 Constantly learning and improving</p>
-    </section>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Lesbian">Lesbian</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Transgender">Transgender</option>
+        </select>
 
-    <section id="highlight" class="highlight cyber-animate pulse">
-      <h2>Featured Project</h2>
-      <p>Take a look at what I've created so far.</p>
-      <a href="project.html" class="button rocket-hover glitch-click">View All Projects</a>
-    </section>
+        <fieldset>
+          <legend>SDG(s) of Interest</legend>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="sdgs" value="1"> No Poverty💰</label>
+            <label><input type="checkbox" name="sdgs" value="2"> Zero Hunger🍽</label>
+            <label><input type="checkbox" name="sdgs" value="3"> Good Health and Well-being👨🏿‍⚕️</label>
+            <label><input type="checkbox" name="sdgs" value="4"> Quality Education👨🏿‍🎓</label>
+            <label><input type="checkbox" name="sdgs" value="5"> Gender Equality🏳️‍🌈</label>
+            <label><input type="checkbox" name="sdgs" value="6"> Clean Water and Sanitation💧</label>
+            <label><input type="checkbox" name="sdgs" value="7"> Affordable and Clean Energy</label>
+            <label><input type="checkbox" name="sdgs" value="8"> Decent Work and Economic Growth</label>
+            <label><input type="checkbox" name="sdgs" value="9"> Industry, Innovation and Infrastructure</label>
+            <label><input type="checkbox" name="sdgs" value="10"> Reduced Inequality</label>
+            <label><input type="checkbox" name="sdgs" value="11"> Sustainable Cities and Communities</label>
+            <label><input type="checkbox" name="sdgs" value="12"> Responsible Consumption and Production</label>
+            <label><input type="checkbox" name="sdgs" value="13"> Climate Action</label>
+            <label><input type="checkbox" name="sdgs" value="14"> Life Below Water</label>
+            <label><input type="checkbox" name="sdgs" value="15"> Life on Land</label>
+            <label><input type="checkbox" name="sdgs" value="16"> Peace & Justice Strong Institutions</label>
+            <label><input type="checkbox" name="sdgs" value="17"> Partnerships for the Goals</label>
+          </div>
+        </fieldset>
 
-    <section id="connect" class="connect cyber-animate">
-      <h2>Get in Touch</h2>
-      <p>Do you have questions or feedback?</p>
-      <a href="contact.html" class="button rocket-hover glitch-click">Contact Me</a>
-    </section>
-
-    <div style="text-align: center; margin: 40px 0;">
-      <<button id="theme-toggle" class="button glitch-click">Toggle Light Mode</button>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  </main>
-  
 
-  <footer>
-    <p>© 2025 Atabelo</p>
-  </footer>
-  
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.getElementById("theme-toggle");
-      const body = document.body;
-
-      toggleBtn.addEventListener("click", () => {
-        body.classList.toggle("light-mode");
-
-        if (body.classList.contains("light-mode")) {
-          toggleBtn.textContent = "Toggle Dark Mode";
-        } else {
-          toggleBtn.textContent = "Toggle Light Mode";
-        }
-      });
-    });
-  </script>
-  <script>
-  for (let i = 0; i < 40; i++) {
-    const star = document.createElement("div");
-    star.className = "neon-star";
-    star.style.left = `${Math.random() * 100}vw`;
-    star.style.top = `${Math.random() * 100}vh`;
-    document.body.appendChild(star);
-  }
-</script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const avatar = document.querySelector(".avatar");
-    if (avatar) {
-      avatar.classList.add("animate-in");
-    }
-  });
-</script>
-<script>
-  document.querySelectorAll('.button.glitch-click').forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.remove('clicked'); // reset if clicked fast
-      void button.offsetWidth; // force reflow
-      button.classList.add('clicked');
-
-      // Remove the class after animation ends to allow repeat
-      setTimeout(() => {
-        button.classList.remove('clicked');
-      }, 400);
-    });
-  });
-</script>
-
-
-
+ 
+    <div class="go-back-bottom">
+      <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Finals/project.html" target="_blank">Go Back</a>
+    </div>
+  </div>
 </body>
 </html>
