@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="profile.png" alt="My Photo" class="avatar">
+    <h1 class="glitch-text">Welcome to My Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section id="about" class="about cyber-animate">
+      <h2>About</h2>
+      <p>This website is a portfolio of my projects using HTML and CSS</p>
+    </section>
+
+    <section id="skills" class="skills futuristic-bg cyber-animate">
+      <h2>What I Do</h2>
+      <p>💻 Build HTML/CSS websites</p>
+      <p>🎨 Design clean, modern layouts</p>
+      <p>📚 Constantly learning and improving</p>
+    </section>
+
+    <section id="highlight" class="highlight cyber-animate pulse">
+      <h2>Featured Project</h2>
+      <p>Take a look at what I've created so far.</p>
+      <a href="project.html" class="button rocket-hover glitch-click">View All Projects</a>
+    </section>
+
+    <section id="connect" class="connect cyber-animate">
+      <h2>Get in Touch</h2>
+      <p>Do you have questions or feedback?</p>
+      <a href="contact.html" class="button rocket-hover glitch-click">Contact Me</a>
+    </section>
+
+    <div style="text-align: center; margin: 40px 0;">
+      <<button id="theme-toggle" class="button glitch-click">Toggle Light Mode</button>
+    </div>
+  </main>
+  
+
+  <footer>
+    <p>© 2025 Atabelo</p>
+  </footer>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-mode");
+
+        if (body.classList.contains("light-mode")) {
+          toggleBtn.textContent = "Toggle Dark Mode";
+        } else {
+          toggleBtn.textContent = "Toggle Light Mode";
+        }
+      });
+    });
+  </script>
+  <script>
+  for (let i = 0; i < 40; i++) {
+    const star = document.createElement("div");
+    star.className = "neon-star";
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    document.body.appendChild(star);
+  }
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const avatar = document.querySelector(".avatar");
+    if (avatar) {
+      avatar.classList.add("animate-in");
+    }
+  });
+</script>
+<script>
+  document.querySelectorAll('.button.glitch-click').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.remove('clicked'); // reset if clicked fast
+      void button.offsetWidth; // force reflow
+      button.classList.add('clicked');
+
+      // Remove the class after animation ends to allow repeat
+      setTimeout(() => {
+        button.classList.remove('clicked');
+      }, 400);
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

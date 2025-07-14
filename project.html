@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="glitch-text"> My Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project cyber-animate">
+      <h2>Project Gallery</h2>
+      <div class="project-container">
+
+        <div class="project-card">
+          <p>💻 <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Lab%202.html" target="_blank">
+            Project 1 – 17 SDG
+          </a></p>
+        </div>
+
+        <div class="project-card">
+          <p>🧪 <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Periodic%20Table%20of%20Elements.html" target="_blank">
+            Project 2 – Periodic Table of Elements
+          </a></p>
+        </div>
+
+        <div class="project-card">
+          <p>📊 <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Lab%204/index.html" target="_blank">
+            Project 3 – SDG Registration Form
+          </a></p>
+        </div>
+
+        <div class="project-card">
+          <p>🖼️ <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Lab%205.html" target="_blank">
+            Project 4 – SDG Grid Layout
+          </a></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div style="text-align: center; margin: 40px 0;">
+    <button id="theme-toggle" class="button rocket-hover"> Toggle Light Mode</button>
+  </div>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-mode");
+
+        if (body.classList.contains("light-mode")) {
+          toggleBtn.textContent = "🚀 Toggle Dark Mode";
+        } else {
+          toggleBtn.textContent = "🚀 Toggle Light Mode";
+        }
+      });
+    });
+  </script>
+  <script>
+  for (let i = 0; i < 40; i++) {
+    const star = document.createElement("div");
+    star.className = "neon-star";
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    document.body.appendChild(star);
+  }
+</script>
+</body>
+</html>
