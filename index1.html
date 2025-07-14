@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UN SDG Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Registration</h1>
+      </div>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g. Jose Jack Gerard" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="e.g. josejackgerard@gmail.com" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="0" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Lesbian">Lesbian</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Transgender">Transgender</option>
+        </select>
+
+        <fieldset>
+          <legend>SDG(s) of Interest</legend>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="sdgs" value="1"> No Poverty💰</label>
+            <label><input type="checkbox" name="sdgs" value="2"> Zero Hunger🍽</label>
+            <label><input type="checkbox" name="sdgs" value="3"> Good Health and Well-being👨🏿‍⚕️</label>
+            <label><input type="checkbox" name="sdgs" value="4"> Quality Education👨🏿‍🎓</label>
+            <label><input type="checkbox" name="sdgs" value="5"> Gender Equality🏳️‍🌈</label>
+            <label><input type="checkbox" name="sdgs" value="6"> Clean Water and Sanitation💧</label>
+            <label><input type="checkbox" name="sdgs" value="7"> Affordable and Clean Energy</label>
+            <label><input type="checkbox" name="sdgs" value="8"> Decent Work and Economic Growth</label>
+            <label><input type="checkbox" name="sdgs" value="9"> Industry, Innovation and Infrastructure</label>
+            <label><input type="checkbox" name="sdgs" value="10"> Reduced Inequality</label>
+            <label><input type="checkbox" name="sdgs" value="11"> Sustainable Cities and Communities</label>
+            <label><input type="checkbox" name="sdgs" value="12"> Responsible Consumption and Production</label>
+            <label><input type="checkbox" name="sdgs" value="13"> Climate Action</label>
+            <label><input type="checkbox" name="sdgs" value="14"> Life Below Water</label>
+            <label><input type="checkbox" name="sdgs" value="15"> Life on Land</label>
+            <label><input type="checkbox" name="sdgs" value="16"> Peace & Justice Strong Institutions</label>
+            <label><input type="checkbox" name="sdgs" value="17"> Partnerships for the Goals</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+ 
+    <div class="go-back-bottom">
+      <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Finals/project.html" target="_blank">Go Back</a>
+    </div>
+  </div>
+</body>
+</html>
