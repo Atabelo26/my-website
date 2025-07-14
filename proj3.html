@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UN SDG Registration Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .form-container {
+      background: #fdfdfd;
+      border-radius: 20px;
+      padding: 40px 50px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .form-header {
+      text-align: center;
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+      color: white;
+      border-radius: 16px;
+      padding: 25px 20px;
+      margin-bottom: 30px;
+    }
+
+    .form-header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 500;
+      color: #222;
+      font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 17px;
+      background-color: #fafafa;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #00b4d8;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 180, 216, 0.4);
+    }
+
+    fieldset {
+      margin-top: 25px;
+      border: none;
+      padding: 0;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .checkbox-grid label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background: #0077b6;
+      color: white;
+      padding: 16px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #023e8a;
+      transform: scale(1.03);
+    }
+
+    .go-back-bottom {
+      text-align: center;
+      margin: 40px 0 10px;
+    }
+
+    .go-back-bottom a {
+      background-color: black;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .go-back-bottom a:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Registration</h1>
+      </div>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g. Jose Jack Gerard" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="e.g. josejackgerard@gmail.com" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="0" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Lesbian">Lesbian</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Transgender">Transgender</option>
+        </select>
+
+        <fieldset>
+          <legend>SDG(s) of Interest</legend>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="sdgs" value="1"> No Poverty💰</label>
+            <label><input type="checkbox" name="sdgs" value="2"> Zero Hunger🍽</label>
+            <label><input type="checkbox" name="sdgs" value="3"> Good Health and Well-being👨🏿‍⚕️</label>
+            <label><input type="checkbox" name="sdgs" value="4"> Quality Education👨🏿‍🎓</label>
+            <label><input type="checkbox" name="sdgs" value="5"> Gender Equality🏳️‍🌈</label>
+            <label><input type="checkbox" name="sdgs" value="6"> Clean Water and Sanitation💧</label>
+            <label><input type="checkbox" name="sdgs" value="7"> Affordable and Clean Energy</label>
+            <label><input type="checkbox" name="sdgs" value="8"> Decent Work and Economic Growth</label>
+            <label><input type="checkbox" name="sdgs" value="9"> Industry, Innovation and Infrastructure</label>
+            <label><input type="checkbox" name="sdgs" value="10"> Reduced Inequality</label>
+            <label><input type="checkbox" name="sdgs" value="11"> Sustainable Cities and Communities</label>
+            <label><input type="checkbox" name="sdgs" value="12"> Responsible Consumption and Production</label>
+            <label><input type="checkbox" name="sdgs" value="13"> Climate Action</label>
+            <label><input type="checkbox" name="sdgs" value="14"> Life Below Water</label>
+            <label><input type="checkbox" name="sdgs" value="15"> Life on Land</label>
+            <label><input type="checkbox" name="sdgs" value="16"> Peace & Justice Strong Institutions</label>
+            <label><input type="checkbox" name="sdgs" value="17"> Partnerships for the Goals</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="go-back-bottom">
+      <a href="file:///C:/Users/Kerr%20Lawrence/Documents/HTML%20files/Finals/project.html" target="_blank">Go Back</a>
+    </div>
+  </div>
+</body>
+</html>
