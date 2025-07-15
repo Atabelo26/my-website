@@ -20,9 +20,6 @@
         url('https://static.vecteezy.com/system/resources/previews/042/363/525/non_2x/flat-icons-of-sustainable-development-goals-by-united-nations-sdg-signs-on-blue-background-global-social-targets-to-save-planet-improve-life-and-solve-social-problems-in-the-world-vector.jpg')
         no-repeat center center fixed;
       background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
     header, footer {
@@ -33,14 +30,22 @@
     }
 
     .container_12 {
-      flex: 1;
       margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .grid_8 {
+      float: left;
+    }
+
+    .grid_4 {
+      float: right;
     }
 
     .content {
       background: rgba(255, 255, 255, 0.95);
       padding: 20px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
     }
@@ -113,9 +118,10 @@
     }
 
     .go-back-container {
+      clear: both;
       text-align: center;
-      margin: 30px auto;
-      padding: 20px 0;
+      padding: 20px;
+      margin-bottom: 20px;
     }
 
     .go-back-button {
