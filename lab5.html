@@ -9,170 +9,168 @@
 
   <style>
     * {
-  box-sizing: border-box;
-}
+      box-sizing: border-box;
+    }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://static.vecteezy.com/system/resources/previews/042/363/525/non_2x/flat-icons-of-sustainable-development-goals-by-united-nations-sdg-signs-on-blue-background-global-social-targets-to-save-planet-improve-life-and-solve-social-problems-in-the-world-vector.jpg')
-    no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://static.vecteezy.com/system/resources/previews/042/363/525/non_2x/flat-icons-of-sustainable-development-goals-by-united-nations-sdg-signs-on-blue-background-global-social-targets-to-save-planet-improve-life-and-solve-social-problems-in-the-world-vector.jpg')
+        no-repeat center center fixed;
+      background-size: cover;
+    }
 
-header, footer {
-  background-color: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-.container_12 {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
-  margin: 0 auto;
-}
+    .container_12 {
+      margin: 0 auto;
+      padding: 0 10px;
+    }
 
-.flex-wrapper {
-  display: flex;
-  flex: 1;
-  gap: 20px;
-  align-items: stretch;
-}
+    .flex-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+    }
 
-.main-column,
-.sidebar-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+    .main-column,
+    .sidebar-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
-.content {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  flex: 1;
-}
+    .content,
+    .sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-.sidebar {
-  background: rgba(255, 255, 255, 0.92);
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid #d0d8e4;
-  flex: 1;
-}
+    .content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
 
-.sidebar h3 {
-  color: #003366;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 5px;
-}
+    .sidebar {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #d0d8e4;
+    }
 
-.sidebar p {
-  color: #333;
-  line-height: 1.5;
-}
+    .sidebar h3 {
+      color: #003366;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 5px;
+    }
 
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
+    .sidebar p {
+      color: #333;
+      line-height: 1.5;
+    }
 
-.sidebar li {
-  margin-bottom: 10px;
-}
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-.sidebar a {
-  color: #003366;
-  text-decoration: none;
-}
+    .sidebar li {
+      margin-bottom: 10px;
+    }
 
-.sidebar a:hover {
-  color: #1a75ff;
-}
+    .sidebar a {
+      color: #003366;
+      text-decoration: none;
+    }
 
-.sdg {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  color: white;
-  transition: transform 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .sidebar a:hover {
+      color: #1a75ff;
+    }
 
-.sdg:hover {
-  transform: translateX(10px);
-}
+    .sdg {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      color: white;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.sdg img {
-  background-color: white;
-  padding: 5px;
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
-}
+    .sdg:hover {
+      transform: translateX(10px);
+    }
 
-.sdg h3 {
-  margin: 0;
-  font-size: 1.1em;
-}
+    .sdg img {
+      background-color: white;
+      padding: 5px;
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+    }
 
-.go-back-container {
-  text-align: center;
-  margin: 40px 0 20px 0;
-}
+    .sdg h3 {
+      margin: 0;
+      font-size: 1.1em;
+    }
 
-.go-back-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #003366;
-  border: 2px solid #003366;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
-}
+    .go-back-container {
+      text-align: center;
+      margin: 40px 0 20px 0;
+    }
 
-.go-back-button:hover {
-  background-color: #fff;
-  color: #003366;
-  transform: scale(1.05);
-}
+    .go-back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #003366;
+      border: 2px solid #003366;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    }
 
-.sdg-1 { background-color: #e5243b; }
-.sdg-2 { background-color: #dda63a; }
-.sdg-3 { background-color: #4c9f38; }
-.sdg-4 { background-color: #c5192d; }
-.sdg-5 { background-color: #ff3a21; }
-.sdg-6 { background-color: #26bde2; }
-.sdg-7 { background-color: #fcc30b; }
-.sdg-8 { background-color: #a21942; }
-.sdg-9 { background-color: #fd6925; }
-.sdg-10 { background-color: #dd1367; }
-.sdg-11 { background-color: #fd9d24; }
-.sdg-12 { background-color: #bf8b2e; }
-.sdg-13 { background-color: #3f7e44; }
-.sdg-14 { background-color: #0a97d9; }
-.sdg-15 { background-color: #56c02b; }
-.sdg-16 { background-color: #00689d; }
-.sdg-17 { background-color: #19486a; }
+    .go-back-button:hover {
+      background-color: #fff;
+      color: #003366;
+      transform: scale(1.05);
+    }
 
+    .sdg-1 { background-color: #e5243b; }
+    .sdg-2 { background-color: #dda63a; }
+    .sdg-3 { background-color: #4c9f38; }
+    .sdg-4 { background-color: #c5192d; }
+    .sdg-5 { background-color: #ff3a21; }
+    .sdg-6 { background-color: #26bde2; }
+    .sdg-7 { background-color: #fcc30b; }
+    .sdg-8 { background-color: #a21942; }
+    .sdg-9 { background-color: #fd6925; }
+    .sdg-10 { background-color: #dd1367; }
+    .sdg-11 { background-color: #fd9d24; }
+    .sdg-12 { background-color: #bf8b2e; }
+    .sdg-13 { background-color: #3f7e44; }
+    .sdg-14 { background-color: #0a97d9; }
+    .sdg-15 { background-color: #56c02b; }
+    .sdg-16 { background-color: #00689d; }
+    .sdg-17 { background-color: #19486a; }
   </style>
 </head>
 <body>
@@ -187,23 +185,23 @@ header, footer {
         <div class="content">
           <h2>17 Sustainable Development Goals</h2>
 
-         <div class="sdg sdg-1"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-01-1024x1024.png"><h3>1. No Poverty</h3></div>
-        <div class="sdg sdg-2"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-02-1024x1024.png"><h3>2. Zero Hunger</h3></div>
-        <div class="sdg sdg-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/1200px-Sustainable_Development_Goal_03GoodHealth.svg.png"><h3>3. Good Health and Well-Being</h3></div>
-        <div class="sdg sdg-4"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-04.png"><h3>4. Quality Education</h3></div>
-        <div class="sdg sdg-5"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-05-1024x1024.png"><h3>5. Gender Equality</h3></div>
-        <div class="sdg sdg-6"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-06-1024x1024.png"><h3>6. Clean Water and Sanitation</h3></div>
-        <div class="sdg sdg-7"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-07-1024x1024.png"><h3>7. Affordable and Clean Energy</h3></div>
-        <div class="sdg sdg-8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuApmOWmXgUtyuGxhIglsZ9pjIOeOYxRJveg&s"><h3>8. Decent Work and Economic Growth</h3></div>
-        <div class="sdg sdg-9"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-09-1024x1024.png"><h3>9. Industry, Innovation and Infrastructure</h3></div>
-        <div class="sdg sdg-10"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-10.png"><h3>10. Reduced Inequalities</h3></div>
-        <div class="sdg sdg-11"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/1200px-Sustainable_Development_Goal_11SustainableCities.svg.png"><h3>11. Sustainable Cities and Communities</h3></div>
-        <div class="sdg sdg-12"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-12-1024x1024.png"><h3>12. Responsible Consumption and Production</h3></div>
-        <div class="sdg sdg-13"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-13-1024x1024.png"><h3>13. Climate Action</h3></div>
-        <div class="sdg sdg-14"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-14-1024x1024.png"><h3>14. Life Below Water</h3></div>
-        <div class="sdg sdg-15"><img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-15.png"><h3>15. Life on Land</h3></div>
-        <div class="sdg sdg-16"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-16-1024x1024.png"><h3>16. Peace, Justice and Strong Institutions</h3></div>
-        <div class="sdg sdg-17"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-17-1024x1024.png"><h3>17. Partnerships for the Goals</h3></div>
+          <div class="sdg sdg-1"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-01-1024x1024.png"><h3>1. No Poverty</h3></div>
+          <div class="sdg sdg-2"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-02-1024x1024.png"><h3>2. Zero Hunger</h3></div>
+          <div class="sdg sdg-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/1200px-Sustainable_Development_Goal_03GoodHealth.svg.png"><h3>3. Good Health and Well-Being</h3></div>
+          <div class="sdg sdg-4"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-04.png"><h3>4. Quality Education</h3></div>
+          <div class="sdg sdg-5"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-05-1024x1024.png"><h3>5. Gender Equality</h3></div>
+          <div class="sdg sdg-6"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-06-1024x1024.png"><h3>6. Clean Water and Sanitation</h3></div>
+          <div class="sdg sdg-7"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-07-1024x1024.png"><h3>7. Affordable and Clean Energy</h3></div>
+          <div class="sdg sdg-8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuApmOWmXgUtyuGxhIglsZ9pjIOeOYxRJveg&s"><h3>8. Decent Work and Economic Growth</h3></div>
+          <div class="sdg sdg-9"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-09-1024x1024.png"><h3>9. Industry, Innovation and Infrastructure</h3></div>
+          <div class="sdg sdg-10"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-10.png"><h3>10. Reduced Inequalities</h3></div>
+          <div class="sdg sdg-11"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/1200px-Sustainable_Development_Goal_11SustainableCities.svg.png"><h3>11. Sustainable Cities and Communities</h3></div>
+          <div class="sdg sdg-12"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-12-1024x1024.png"><h3>12. Responsible Consumption and Production</h3></div>
+          <div class="sdg sdg-13"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-13-1024x1024.png"><h3>13. Climate Action</h3></div>
+          <div class="sdg sdg-14"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-14-1024x1024.png"><h3>14. Life Below Water</h3></div>
+          <div class="sdg sdg-15"><img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-15.png"><h3>15. Life on Land</h3></div>
+          <div class="sdg sdg-16"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-16-1024x1024.png"><h3>16. Peace, Justice and Strong Institutions</h3></div>
+          <div class="sdg sdg-17"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-17-1024x1024.png"><h3>17. Partnerships for the Goals</h3></div>
         </div>
       </div>
 
