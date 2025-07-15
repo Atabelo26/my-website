@@ -12,17 +12,10 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      margin: 0;
+      padding: 0;
       color: #333;
       background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -38,13 +31,17 @@
       text-align: center;
     }
 
-    main {
-      flex: 1;
-    }
-
     .container_12 {
       margin: 0 auto;
       overflow: hidden;
+    }
+
+    .grid_8 {
+      float: left;
+    }
+
+    .grid_4 {
+      float: right;
     }
 
     .content {
@@ -122,9 +119,13 @@
       font-size: 1.1em;
     }
 
+    .clear {
+      clear: both;
+    }
+
     .go-back-container {
       text-align: center;
-      margin: 30px 0;
+      margin: 40px 0 20px 0;
     }
 
     .go-back-button {
@@ -171,11 +172,11 @@
     <h1>Sustainable Development Goals</h1>
   </header>
 
-  <main>
-    <div class="container_12">
-      <div class="grid_8">
-        <div class="content">
-          <h2>17 Sustainable Development Goals</h2>
+  <div class="container_12">
+    <div class="grid_8">
+      <div class="content">
+        <h2>17 Sustainable Development Goals</h2>
+
         <div class="sdg sdg-1"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-01-1024x1024.png"><h3>1. No Poverty</h3></div>
         <div class="sdg sdg-2"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-02-1024x1024.png"><h3>2. Zero Hunger</h3></div>
         <div class="sdg sdg-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/1200px-Sustainable_Development_Goal_03GoodHealth.svg.png"><h3>3. Good Health and Well-Being</h3></div>
@@ -193,30 +194,31 @@
         <div class="sdg sdg-15"><img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-15.png"><h3>15. Life on Land</h3></div>
         <div class="sdg sdg-16"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-16-1024x1024.png"><h3>16. Peace, Justice and Strong Institutions</h3></div>
         <div class="sdg sdg-17"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-17-1024x1024.png"><h3>17. Partnerships for the Goals</h3></div>
-        </div>
-      </div>
-
-      <div class="grid_4">
-        <aside class="sidebar">
-          <h3>About SDG</h3>
-          <p>The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015...</p>
-          <p>The 17 SDGs are integrated—they recognize that action in one area will affect outcomes in others...</p>
-          <p>Countries have committed to prioritize progress for those who’re furthest behind...</p>
-          <p>The creativity, know-how, technology and financial resources from all of society is necessary...</p>
-
-          <h3 style="margin-top: 20px;">More Info</h3>
-          <ul>
-            <li><a href="https://www.un.org/sustainabledevelopment/" target="_blank">UN SDGs</a></li>
-            <li><a href="https://www.globalgoals.org/" target="_blank">Global Goals</a></li>
-          </ul>
-        </aside>
       </div>
     </div>
+
+    <div class="grid_4">
+      <aside class="sidebar">
+        <h3>About SDG</h3>
+        <p>The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015...</p>
+        <p>The 17 SDGs are integrated—they recognize that action in one area will affect outcomes in others...</p>
+        <p>Countries have committed to prioritize progress for those who’re furthest behind...</p>
+        <p>The creativity, know-how, technology and financial resources from all of society is necessary...</p>
+
+        <h3 style="margin-top: 20px;">More Info</h3>
+        <ul>
+          <li><a href="https://www.un.org/sustainabledevelopment/" target="_blank">UN SDGs</a></li>
+          <li><a href="https://www.globalgoals.org/" target="_blank">Global Goals</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="clear"></div>
 
     <div class="go-back-container">
       <a href="project.html" target="_blank" class="go-back-button">Go Back</a>
     </div>
-  </main>
+  </div>
 
   <footer>
     <p>&copy; 2025 SDG Webpage. All rights reserved.</p>
