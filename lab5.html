@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SDG Webpage</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" />
 
   <style>
@@ -18,9 +19,10 @@
     }
 
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
       color: #333;
       background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -122,26 +124,26 @@
 
     .go-back-container {
       text-align: center;
-      margin-top: auto;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
 
     .go-back-button {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 10px 20px;
       font-size: 16px;
       color: #fff;
       background-color: #003366;
       border: 2px solid #003366;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s, transform 0.2s;
     }
 
     .go-back-button:hover {
       background-color: #fff;
       color: #003366;
+      transform: scale(1.05);
     }
 
     .sdg-1 { background-color: #e5243b; }
