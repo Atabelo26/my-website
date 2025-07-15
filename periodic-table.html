@@ -4,114 +4,118 @@
   <meta charset="UTF-8">
   <title>Periodic Table of Elements</title>
   <style>
-  html, body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background: linear-gradient(to right, #e0f7fa, #e1bee7); /* Cyan to lavender gradient */
-    background-attachment: fixed;
-    height: 100%;
-  }
+    html, body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      background-attachment: fixed;
+      height: 100%;
+    }
 
-  body {
-    justify-content: space-between;
-  }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 36px;
-    font-weight: 900;
-    color: #4b0082;
-    text-shadow: 2px 2px 6px rgba(75, 0, 130, 0.4);
-    letter-spacing: 2px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    padding-bottom: 10px;
-  }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: 900;
+      color: #4b0082;
+      text-shadow: 2px 2px 6px rgba(75, 0, 130, 0.4);
+      letter-spacing: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      padding-bottom: 10px;
+    }
 
-  table {
-    border-collapse: collapse;
-    margin: 0 auto;
-  }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
 
-  td {
-    border: 2px solid #555;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 12px;
-    padding: 5px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+    td {
+      border: 2px solid #555;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 12px;
+      padding: 5px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-  td:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    position: relative;
-  }
+    td:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      position: relative;
+    }
 
-  .element-symbol {
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-  }
+    .element-symbol {
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+    }
 
-  .atomic-number {
-    font-size: 10px;
-  }
+    .atomic-number {
+      font-size: 10px;
+    }
 
-  .atomic-mass {
-    font-size: 10px;
-    display: block;
-    margin-top: 4px;
-  }
+    .atomic-mass {
+      font-size: 10px;
+      display: block;
+      margin-top: 4px;
+    }
 
-  .metal        { background-color: #ffd700; }
-  .nonmetal     { background-color: #90ee90; }
-  .metalloid    { background-color: #add8e6; }
-  .noble-gas    { background-color: #ffb6c1; }
-  .halogen      { background-color: #ffa07a; }
-  .alkali       { background-color: #ffdead; }
-  .alkaline     { background-color: #e6e6fa; }
-  .transition   { background-color: #d3d3d3; }
-  .lanthanoid   { background-color: #f0e68c; }
-  .actinoid     { background-color: #dda0dd; }
+    .metal        { background-color: #ffd700; }
+    .nonmetal     { background-color: #90ee90; }
+    .metalloid    { background-color: #add8e6; }
+    .noble-gas    { background-color: #ffb6c1; }
+    .halogen      { background-color: #ffa07a; }
+    .alkali       { background-color: #ffdead; }
+    .alkaline     { background-color: #e6e6fa; }
+    .transition   { background-color: #d3d3d3; }
+    .lanthanoid   { background-color: #f0e68c; }
+    .actinoid     { background-color: #dda0dd; }
 
-  .empty {
-    background-color: transparent;
-    border: none;
-  }
+    .empty {
+      background-color: transparent;
+      border: none;
+    }
 
-  .center-link {
-    text-align: center;
-    margin-top: 30px;
-  }
+    .center-link {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
 
-  .center-link a {
-    text-decoration: none;
-    background-color: #4b0082;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
+    .center-link button {
+      background-color: #4b0082;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-  .center-link a:hover {
-    background-color: #6a0dad;
-    transform: scale(1.05);
-  }
+    .center-link button:hover {
+      background-color: #6a0dad;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
 
 <h1>Periodic Table of Elements</h1>
 <img src="https://cdn-icons-png.flaticon.com/512/1534/1534076.png" alt="Periodic Table Icon" style="width:100px; display:block; margin:10px auto;">
-
 <table>
   <!-- Period 1 -->
   <tr>
@@ -418,9 +422,8 @@
     <td class="actinoid"><span class="atomic-number">103</span><span class="element-symbol">Lr</span><span class="atomic-mass">262</span></td>
   </tr>
 </table>
-
 <div class="center-link">
-  <a href="project.html" target="_blank">Go Back</a>
+  <button onclick="location.href='project.html'">Go Back</button>
 </div>
 
 </body>
