@@ -36,10 +36,17 @@
       padding: 0 10px;
     }
 
+    .page-layout {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
     .flex-wrapper {
       display: flex;
-      gap: 20px;
       align-items: stretch;
+      gap: 20px;
+      flex-grow: 1;
     }
 
     .main-column,
@@ -52,9 +59,6 @@
     .content,
     .sidebar {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
     .content {
@@ -180,50 +184,52 @@
   </header>
 
   <div class="container_12">
-    <div class="flex-wrapper">
-      <div class="main-column">
-        <div class="content">
-          <h2>17 Sustainable Development Goals</h2>
+    <div class="page-layout">
+      <div class="flex-wrapper">
+        <div class="main-column">
+          <div class="content">
+            <h2>17 Sustainable Development Goals</h2>
 
-          <div class="sdg sdg-1"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-01-1024x1024.png"><h3>1. No Poverty</h3></div>
-          <div class="sdg sdg-2"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-02-1024x1024.png"><h3>2. Zero Hunger</h3></div>
-          <div class="sdg sdg-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/1200px-Sustainable_Development_Goal_03GoodHealth.svg.png"><h3>3. Good Health and Well-Being</h3></div>
-          <div class="sdg sdg-4"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-04.png"><h3>4. Quality Education</h3></div>
-          <div class="sdg sdg-5"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-05-1024x1024.png"><h3>5. Gender Equality</h3></div>
-          <div class="sdg sdg-6"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-06-1024x1024.png"><h3>6. Clean Water and Sanitation</h3></div>
-          <div class="sdg sdg-7"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-07-1024x1024.png"><h3>7. Affordable and Clean Energy</h3></div>
-          <div class="sdg sdg-8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuApmOWmXgUtyuGxhIglsZ9pjIOeOYxRJveg&s"><h3>8. Decent Work and Economic Growth</h3></div>
-          <div class="sdg sdg-9"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-09-1024x1024.png"><h3>9. Industry, Innovation and Infrastructure</h3></div>
-          <div class="sdg sdg-10"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-10.png"><h3>10. Reduced Inequalities</h3></div>
-          <div class="sdg sdg-11"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/1200px-Sustainable_Development_Goal_11SustainableCities.svg.png"><h3>11. Sustainable Cities and Communities</h3></div>
-          <div class="sdg sdg-12"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-12-1024x1024.png"><h3>12. Responsible Consumption and Production</h3></div>
-          <div class="sdg sdg-13"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-13-1024x1024.png"><h3>13. Climate Action</h3></div>
-          <div class="sdg sdg-14"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-14-1024x1024.png"><h3>14. Life Below Water</h3></div>
-          <div class="sdg sdg-15"><img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-15.png"><h3>15. Life on Land</h3></div>
-          <div class="sdg sdg-16"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-16-1024x1024.png"><h3>16. Peace, Justice and Strong Institutions</h3></div>
-          <div class="sdg sdg-17"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-17-1024x1024.png"><h3>17. Partnerships for the Goals</h3></div>
+            <div class="sdg sdg-1"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-01-1024x1024.png"><h3>1. No Poverty</h3></div>
+            <div class="sdg sdg-2"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-02-1024x1024.png"><h3>2. Zero Hunger</h3></div>
+            <div class="sdg sdg-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/1200px-Sustainable_Development_Goal_03GoodHealth.svg.png"><h3>3. Good Health and Well-Being</h3></div>
+            <div class="sdg sdg-4"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-04.png"><h3>4. Quality Education</h3></div>
+            <div class="sdg sdg-5"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-05-1024x1024.png"><h3>5. Gender Equality</h3></div>
+            <div class="sdg sdg-6"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-06-1024x1024.png"><h3>6. Clean Water and Sanitation</h3></div>
+            <div class="sdg sdg-7"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-07-1024x1024.png"><h3>7. Affordable and Clean Energy</h3></div>
+            <div class="sdg sdg-8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuApmOWmXgUtyuGxhIglsZ9pjIOeOYxRJveg&s"><h3>8. Decent Work and Economic Growth</h3></div>
+            <div class="sdg sdg-9"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-09-1024x1024.png"><h3>9. Industry, Innovation and Infrastructure</h3></div>
+            <div class="sdg sdg-10"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-10.png"><h3>10. Reduced Inequalities</h3></div>
+            <div class="sdg sdg-11"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/1200px-Sustainable_Development_Goal_11SustainableCities.svg.png"><h3>11. Sustainable Cities and Communities</h3></div>
+            <div class="sdg sdg-12"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-12-1024x1024.png"><h3>12. Responsible Consumption and Production</h3></div>
+            <div class="sdg sdg-13"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-13-1024x1024.png"><h3>13. Climate Action</h3></div>
+            <div class="sdg sdg-14"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-14-1024x1024.png"><h3>14. Life Below Water</h3></div>
+            <div class="sdg sdg-15"><img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-15.png"><h3>15. Life on Land</h3></div>
+            <div class="sdg sdg-16"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-16-1024x1024.png"><h3>16. Peace, Justice and Strong Institutions</h3></div>
+            <div class="sdg sdg-17"><img src="https://sdg.neda.gov.ph/wp-content/uploads/2019/02/E_SDG-goals_icons-individual-rgb-17-1024x1024.png"><h3>17. Partnerships for the Goals</h3></div>
+          </div>
+        </div>
+
+        <div class="sidebar-column">
+          <aside class="sidebar">
+            <h3>About SDG</h3>
+            <p>The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015...</p>
+            <p>The 17 SDGs are integrated—they recognize that action in one area will affect outcomes in others...</p>
+            <p>Countries have committed to prioritize progress for those who’re furthest behind...</p>
+            <p>The creativity, know-how, technology and financial resources from all of society is necessary...</p>
+
+            <h3 style="margin-top: 20px;">More Info</h3>
+            <ul>
+              <li><a href="https://www.un.org/sustainabledevelopment/" target="_blank">UN SDGs</a></li>
+              <li><a href="https://www.globalgoals.org/" target="_blank">Global Goals</a></li>
+            </ul>
+          </aside>
         </div>
       </div>
 
-      <div class="sidebar-column">
-        <aside class="sidebar">
-          <h3>About SDG</h3>
-          <p>The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015...</p>
-          <p>The 17 SDGs are integrated—they recognize that action in one area will affect outcomes in others...</p>
-          <p>Countries have committed to prioritize progress for those who’re furthest behind...</p>
-          <p>The creativity, know-how, technology and financial resources from all of society is necessary...</p>
-
-          <h3 style="margin-top: 20px;">More Info</h3>
-          <ul>
-            <li><a href="https://www.un.org/sustainabledevelopment/" target="_blank">UN SDGs</a></li>
-            <li><a href="https://www.globalgoals.org/" target="_blank">Global Goals</a></li>
-          </ul>
-        </aside>
+      <div class="go-back-container">
+        <a href="project.html" target="_blank" class="go-back-button">Go Back</a>
       </div>
-    </div>
-
-    <div class="go-back-container">
-      <a href="project.html" target="_blank" class="go-back-button">Go Back</a>
     </div>
   </div>
 
