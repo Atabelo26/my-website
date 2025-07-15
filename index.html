@@ -91,11 +91,11 @@
 <script>
   document.querySelectorAll('.button.glitch-click').forEach(button => {
     button.addEventListener('click', () => {
-      button.classList.remove('clicked'); // reset if clicked fast
-      void button.offsetWidth; // force reflow
+      button.classList.remove('clicked'); 
+      void button.offsetWidth; 
       button.classList.add('clicked');
 
-      // Remove the class after animation ends to allow repeat
+      
       setTimeout(() => {
         button.classList.remove('clicked');
       }, 400);
