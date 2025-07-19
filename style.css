@@ -436,14 +436,28 @@ body::after {
   background: #00ffff;
   border-radius: 50%;
   box-shadow: 0 0 6px #00ffff;
-  animation: blink 2s infinite alternate ease-in-out;
   pointer-events: none;
   z-index: 0;
+  animation: blink 2s infinite alternate ease-in-out, floatStar 60s linear infinite;
 }
 
 @keyframes blink {
   0% { opacity: 0.2; transform: scale(1); }
   100% { opacity: 1; transform: scale(1.5); }
+}
+@keyframes floatStar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
 }
 
 .container {
